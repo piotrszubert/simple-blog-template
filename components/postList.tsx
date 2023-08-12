@@ -67,7 +67,7 @@ export default function PostList() {
        >
             {posts.map((item, index) => (
                 <Card
-                    className="hover:translate-x-2 border hover:shadow-lg hover:cursor-pointer hover:bg-accent transition-all"
+                    className="md:hover:translate-x-2 border hover:shadow-lg hover:cursor-pointer hover:bg-accent transition-all"
                     key={index}
                 >
                     <CardHeader>
