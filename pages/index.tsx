@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 
 import PostList from '@/components/postList'
-import SubscribeCard from '@/components/subscribeCard'
+import ContentTabs from '@/components/contentTabs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +12,7 @@ export default function Home() {
     >
       <div className='relative'>
         <div className='w-full md:w-80 block md:fixed top-1/2 md:-translate-y-1/2'>
-          <SubscribeCard/>
+          <ContentTabs/>
         </div>
       </div>
       <div>
