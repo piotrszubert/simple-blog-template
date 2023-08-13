@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 
 export default function SubscribeCard() {
     return(
-        <Card>
+        <Card className="mt-6 md:mt-0">
             <CardHeader>
               <CardTitle>Subsribe newsletter</CardTitle>
               <CardDescription>Submit you email and get notification when new post come out</CardDescription>
