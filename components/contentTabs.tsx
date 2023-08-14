@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import SubscribeCard from '@/components/subscribeCard'
+import FaqList from "@/components/faqList";
 
 export default function ContentTabs() {
     return(
@@ -11,10 +12,14 @@ export default function ContentTabs() {
                 <TabsTrigger value="subscribe">Subscribe</TabsTrigger>
             </TabsList>
             <TabsContent value="about">Make changes to your account here.</TabsContent>
-            <TabsContent value="faq">Change your password here.</TabsContent>
-            <TabsContent value="contact">faq</TabsContent>
+            <TabsContent value="faq">
+                <FaqList />
+            </TabsContent>
+            <TabsContent value="contact">
+                Contact
+            </TabsContent>
             <TabsContent value="subscribe">
-                <SubscribeCard/>
+                <SubscribeCard />
             </TabsContent>
         </Tabs>
     );
