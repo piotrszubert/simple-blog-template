@@ -4,7 +4,7 @@ import FaqList from "@/components/faqList";
 
 export default function ContentTabs() {
     return(
-        <Tabs defaultValue="about">
+        <Tabs defaultValue="about" className="md:min-h-[22rem]">
             <TabsList>
                 <TabsTrigger value="about">About</TabsTrigger>
                 <TabsTrigger value="faq">Faq</TabsTrigger>
