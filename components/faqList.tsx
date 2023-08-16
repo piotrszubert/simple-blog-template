@@ -4,6 +4,13 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
 
 const data = [
     {
@@ -19,7 +26,7 @@ const data = [
         answer: "Absolutely! We welcome guest contributions from passionate writers. Feel free to reach out to us with your ideas."
     },
     {
-        question: "Do you offer advertising opportunities on your blog?",
+        question: "Do you offer advertising opportunities?",
         answer: "Yes, we offer advertising slots for businesses looking to promote their products or services to our engaged audience. Contact us for more information."
     }
 ];
@@ -27,16 +34,24 @@ const data = [
 export default function FaqList() {
     return(
         <div>
-            <Accordion type="single" collapsible>
-                {data.map((item, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger>{item.question}</AccordionTrigger>
-                        <AccordionContent>
-                            {item.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Frequently Asked Questions</CardTitle>
+                    <CardDescription>Here are some common questions our readers ask.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <Accordion type="single" collapsible>
+                        {data.map((item, index) => (
+                            <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger>{item.question}</AccordionTrigger>
+                                <AccordionContent>
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </CardContent>
+            </Card>
         </div>
     );
 }
