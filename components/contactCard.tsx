@@ -2,14 +2,12 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -60,9 +58,6 @@ export default function ContactCard() {
                                     <FormControl>
                                         <Input type="email" placeholder="email@example.com"  {...form.register("email")} />
                                     </FormControl>
-                                    {/* <FormDescription>
-                                        Leave your email so we can reply you
-                                    </FormDescription> */}
                                     <FormMessage />
                                 </FormItem>
                                 <FormItem>
@@ -70,9 +65,6 @@ export default function ContactCard() {
                                     <FormControl>
                                         <Textarea   {...form.register("message")} />
                                     </FormControl>
-                                    {/* <FormDescription>
-                                        Leave your email so we can reply you
-                                    </FormDescription> */}
                                     <FormMessage />
                                 </FormItem>
                             </>
@@ -82,9 +74,6 @@ export default function ContactCard() {
                 </form>
             </Form>
         </CardContent>
-        <CardFooter>
-            {/* <p>Card Footer</p> */}
-        </CardFooter>
         </Card>
     );
 }
