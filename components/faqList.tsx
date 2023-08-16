@@ -26,7 +26,7 @@ const data = [
         answer: "Absolutely! We welcome guest contributions from passionate writers. Feel free to reach out to us with your ideas."
     },
     {
-        question: "Do you offer advertising opportunities on your blog?",
+        question: "Do you offer advertising opportunities?",
         answer: "Yes, we offer advertising slots for businesses looking to promote their products or services to our engaged audience. Contact us for more information."
     }
 ];
