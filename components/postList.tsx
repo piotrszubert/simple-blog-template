@@ -71,7 +71,7 @@ const posts = [
 export default function PostList() {
     return(
        <div
-        className="flex flex-col gap-4 py-6"
+        className="flex flex-col gap-4"
        >
             {posts.map((item, index) => (
                 <Card
