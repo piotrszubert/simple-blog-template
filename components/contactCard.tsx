@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
+import { Send } from "lucide-react";
 
 const formSchema = z.object({
     email: z.string().min(2).max(50),
@@ -47,11 +48,11 @@ export default function ContactCard() {
         </CardHeader>
         <CardContent>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
                     <FormField
                         control={form.control}
                         name="email"
-                        render={({ field }) => (
+                        render={() => (
                             <>
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
@@ -63,14 +64,17 @@ export default function ContactCard() {
                                 <FormItem>
                                     <FormLabel>Message</FormLabel>
                                     <FormControl>
-                                        <Textarea   {...form.register("message")} />
+                                        <Textarea placeholder="Your message." {...form.register("message")} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
                             </>
                         )}
                     />
-                    <Button type="submit">Submit</Button>
+                    <Button className="gap-2" type="submit">
+                        <Send className="w-4 h-4" />    
+                        Submit
+                    </Button>
                 </form>
             </Form>
         </CardContent>
