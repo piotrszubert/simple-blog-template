@@ -7,6 +7,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 const posts = [
   {
@@ -14,7 +15,7 @@ const posts = [
     title: "Exploring the Wonders of Nature",
     date: "2023-08-01",
     description: "A captivating journey through lush forests, majestic mountains, and serene lakes.",
-    image: "https://via.placeholder.com/300",
+    image: "nature.jpg",
     tags: ["travel", "nature", "adventure"]
   },
   {
@@ -22,7 +23,7 @@ const posts = [
     title: "Unveiling the Secrets of Ancient Civilizations",
     date: "2023-07-15",
     description: "Delve into the mysteries of long-lost cultures and their remarkable achievements.",
-    image: "https://via.placeholder.com/300",
+    image: "ancient.jpg",
     tags: ["history", "archaeology"]
   },
   {
@@ -30,7 +31,7 @@ const posts = [
     title: "Mastering the Art of Culinary Delights",
     date: "2023-06-20",
     description: "Embark on a culinary adventure, exploring flavors from around the world and learning expert techniques.",
-    image: "https://via.placeholder.com/300",
+    image: "culinary.jpg",
     tags: ["food", "cooking", "travel"]
   },
   {
@@ -38,7 +39,7 @@ const posts = [
     title: "Astronomy: Discovering the Cosmos",
     date: "2023-05-10",
     description: "Peer through telescopes to unravel the mysteries of stars, galaxies, and beyond.",
-    image: "https://via.placeholder.com/300",
+    image: "cosmos.jpg",
     tags: ["science", "astronomy", "space", "exploration"]
   },
   {
@@ -46,7 +47,7 @@ const posts = [
     title: "The Evolution of Technology",
     date: "2023-04-02",
     description: "Trace the history of innovation, from the first tools to cutting-edge advancements.",
-    image: "https://via.placeholder.com/300",
+    image: "technology.jpg",
     tags: ["technology", "history", "innovation"]
   },
   {
@@ -54,7 +55,7 @@ const posts = [
     title: "Exploring Remote Wilderness",
     date: "2023-03-15",
     description: "Embark on an expedition to untouched landscapes, discovering hidden treasures of nature.",
-    image: "https://via.placeholder.com/300",
+    image: "wilderness.jpg",
     tags: ["travel", "nature", "adventure", "exploration"]
   },
   {
@@ -62,7 +63,7 @@ const posts = [
     title: "Art and Culture: Bridging the Past and Present",
     date: "2023-02-08",
     description: "Immerse yourself in the rich tapestry of human creativity, from ancient artworks to modern expressions.",
-    image: "https://via.placeholder.com/300",
+    image: "art.jpg",
     tags: ["art", "culture", "history"]
   }
 ];
@@ -83,7 +84,7 @@ export default function PostList() {
                         <CardDescription>{item.date}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <img className="rounded" width="200" height="200" src={item.image} alt={item.title} />
+                        <Image className="rounded" width="200" height="200" src={`/posts-images/${item.image}`} alt={item.title}/>
                         <p className="mt-4">
                             {item.description}
                         </p>
