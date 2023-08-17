@@ -51,7 +51,7 @@ export default function ContactCard() {
                     <FormField
                         control={form.control}
                         name="email"
-                        render={({ field }) => (
+                        render={() => (
                             <>
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
