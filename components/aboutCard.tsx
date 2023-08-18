@@ -41,7 +41,7 @@ export default function AboutCard() {
                                     <AvatarFallback>CN</AvatarFallback>
                                 </Avatar>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent side="bottom">
                             <p>Read about CN</p>
                             </TooltipContent>
                         </Tooltip>
@@ -54,7 +54,7 @@ export default function AboutCard() {
                                     <AvatarFallback>PS</AvatarFallback>
                                 </Avatar>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent side="bottom">
                             <p>Read about PS777</p>
                             </TooltipContent>
                         </Tooltip>
