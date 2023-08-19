@@ -12,6 +12,7 @@ export default function ContentTabs() {
                 <TabsTrigger value="faq">Faq</TabsTrigger>
                 <TabsTrigger value="contact">Contact</TabsTrigger>
                 <TabsTrigger value="subscribe">Subscribe</TabsTrigger>
+                <TabsTrigger value="settings">Settings</TabsTrigger>
             </TabsList>
             <TabsContent value="about">
                 <AboutCard />
@@ -24,6 +25,9 @@ export default function ContentTabs() {
             </TabsContent>
             <TabsContent value="subscribe">
                 <SubscribeCard />
+            </TabsContent>
+            <TabsContent value="settings">
+                Settings
             </TabsContent>
         </Tabs>
     );
