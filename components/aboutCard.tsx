@@ -29,7 +29,7 @@ export default function AboutCard() {
                     Aut maxime ex dolore quas recusandae dolor quibusdam sint excepturi accusantium architecto.
                 </div>
                 <div 
-                    className="flex gap-3" 
+                    className="inline-flex gap-3" 
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
