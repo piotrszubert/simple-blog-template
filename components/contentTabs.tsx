@@ -3,6 +3,7 @@ import SubscribeCard from '@/components/subscribeCard'
 import FaqList from "@/components/faqList";
 import ContactCard from "./contactCard";
 import AboutCard from "./aboutCard";
+import { ThemeToggle } from "./themeToggle";
 
 export default function ContentTabs() {
     return(
@@ -28,6 +29,7 @@ export default function ContentTabs() {
             </TabsContent>
             <TabsContent value="settings">
                 Settings
+                <ThemeToggle/>
             </TabsContent>
         </Tabs>
     );
