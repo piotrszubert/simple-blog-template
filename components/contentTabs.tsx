@@ -4,8 +4,12 @@ import FaqList from "@/components/faqList";
 import ContactCard from "./contactCard";
 import AboutCard from "./aboutCard";
 import { ThemeToggle } from "./themeToggle";
+import { useTheme } from "next-themes"
+import SettingsCard from "./settingsCard";
 
 export default function ContentTabs() {
+    const {theme} = useTheme();
+
     return(
         <Tabs defaultValue="about" className="md:min-h-[22rem]">
             <TabsList>
@@ -28,8 +32,7 @@ export default function ContentTabs() {
                 <SubscribeCard />
             </TabsContent>
             <TabsContent value="settings">
-                Settings
-                <ThemeToggle/>
+                <SettingsCard />
             </TabsContent>
         </Tabs>
     );
