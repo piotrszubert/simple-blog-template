@@ -5,6 +5,7 @@ import ContactCard from "./contactCard";
 import AboutCard from "./aboutCard";
 import { ThemeToggle } from "./themeToggle";
 import { useTheme } from "next-themes"
+import SettingsCard from "./settingsCard";
 
 export default function ContentTabs() {
     const {theme} = useTheme();
@@ -31,10 +32,7 @@ export default function ContentTabs() {
                 <SubscribeCard />
             </TabsContent>
             <TabsContent value="settings">
-                <div className="flex flex-col gap-3">
-                    Current theme:  {theme}
-                    <ThemeToggle/>
-                </div>
+                <SettingsCard />
             </TabsContent>
         </Tabs>
     );
