@@ -1,17 +1,15 @@
 import { Inter } from 'next/font/google'
 import PostList from '@/components/postList'
 import ContentTabs from '@/components/contentTabs'
-import Head from 'next/head'
+import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/themeToggle'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
-    <>
-      <Head>
-        <title>Blog</title>
-      </Head>
-      <main
+    <main
         className={`max-w-5xl m-auto gap-x-20 gap-y-6 grid grid-cols-1 md:grid-cols-2 px-3  ${inter.className}`}
         >
         <div>
@@ -23,6 +21,5 @@ export default function Home() {
           <PostList/>
         </div>
       </main>
-    </>
   )
 }
