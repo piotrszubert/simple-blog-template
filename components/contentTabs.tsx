@@ -1,7 +1,11 @@
+'use client'
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 // import SubscribeCard from '@/components/subscribeCard'
 // import FaqList from "@/components/faqList";
 import ContactCard from "./contactCard";
+import FaqList from "./faqList";
+import SubscribeCard from "./subscribeCard";
 import AboutCard from "./aboutCard";
 import { ThemeToggle } from "./themeToggle";
 import { useTheme } from "next-themes"
@@ -23,13 +27,13 @@ export default function ContentTabs() {
                 <AboutCard />
             </TabsContent>
             <TabsContent value="faq">
-                {/* <FaqList /> */}
+                <FaqList />
             </TabsContent>
             <TabsContent value="contact">
                 <ContactCard />
             </TabsContent>
             <TabsContent value="subscribe">
-                {/* <SubscribeCard /> */}
+                <SubscribeCard />
             </TabsContent>
             <TabsContent value="settings">
                 <SettingsCard />
