@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main
-        className={`max-w-5xl m-auto gap-x-20 gap-y-6 grid grid-cols-1 md:grid-cols-2 px-3  ${inter.className}`}
+        className={`max-w-5xl m-auto gap-x-6 gap-y-6 grid grid-cols-1 md:grid-cols-2 px-3  ${inter.className}`}
         >
         <div>
           <div className='md:sticky top-1/2 md:-translate-y-1/2 mt-6'>

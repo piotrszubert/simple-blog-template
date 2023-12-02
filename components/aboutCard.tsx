@@ -2,12 +2,8 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useHover } from "@/lib/useHover";
 
 export default function AboutCard() {
-    const [isHovered1, handleMouseEnter1, handleMouseLeave1] = useHover();
-    const [isHovered2, handleMouseEnter2, handleMouseLeave2] = useHover();
-
     return (
         <Card className="mt-6 md:mt-0">
             <CardHeader>
@@ -22,8 +18,8 @@ export default function AboutCard() {
                 <div className="inline-flex gap-3">
                     <TooltipProvider>
                         <Tooltip>
-                            <TooltipTrigger onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
-                                <Avatar className={isHovered1 ? 'transition-all scale-110' : 'transition-all'}>
+                            <TooltipTrigger>
+                                <Avatar className="transition-all duration-300 hover:scale-110">
                                     <AvatarImage src="https://github.com/shadcn.png" />
                                     <AvatarFallback>CN</AvatarFallback>
                                 </Avatar>
@@ -35,8 +31,8 @@ export default function AboutCard() {
                     </TooltipProvider>
                     <TooltipProvider>
                         <Tooltip>
-                            <TooltipTrigger onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
-                                <Avatar className={isHovered2 ? 'transition-all scale-110' : 'transition-all'}>
+                            <TooltipTrigger>
+                                <Avatar className="transition-all duration-300 hover:scale-110">
                                     <AvatarImage src="https://github.com/piotrszubert.png" />
                                     <AvatarFallback>PS</AvatarFallback>
                                 </Avatar>

@@ -1,19 +1,13 @@
 'use client'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-// import SubscribeCard from '@/components/subscribeCard'
-// import FaqList from "@/components/faqList";
 import ContactCard from "./contactCard";
 import FaqList from "./faqList";
 import SubscribeCard from "./subscribeCard";
 import AboutCard from "./aboutCard";
-import { ThemeToggle } from "./themeToggle";
-import { useTheme } from "next-themes"
 import SettingsCard from "./settingsCard";
 
 export default function ContentTabs() {
-    const {theme} = useTheme();
-
     return(
         <Tabs defaultValue="about" className="md:min-h-[22rem]">
             <TabsList>
