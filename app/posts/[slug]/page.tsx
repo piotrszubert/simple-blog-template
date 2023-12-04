@@ -46,7 +46,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-    <main>
+    <main className="py-8">
       <article className="prose prose-lg prose-stone mx-auto max-w-xl py-8 dark:prose-invert">
         <div className="mb-8 text-center">
           <time dateTime={post.date} className="mb-1 text-sm">
