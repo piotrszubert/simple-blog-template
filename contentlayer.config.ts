@@ -27,6 +27,7 @@ export default makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       [
+        //@ts-ignore
         rehypePrettyCode,
         {
           theme: "github-dark",
