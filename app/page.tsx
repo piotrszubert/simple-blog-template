@@ -1,8 +1,5 @@
 import { Inter } from "next/font/google"
-import PostList from "@/components/postList"
 import ContentTabs from "@/components/contentTabs"
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/themeToggle"
 import PostsList from "@/components/postsList"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -19,7 +16,6 @@ export default function Home() {
       </div>
       <div>
         <PostsList />
-        {/* <PostList /> */}
       </div>
     </main>
   )
