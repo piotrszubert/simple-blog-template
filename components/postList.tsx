@@ -1,14 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "./ui/badge"
-import Image from "next/image"
-
 const posts = [
   {
     id: 1,
@@ -74,40 +63,3 @@ const posts = [
     tags: ["art", "culture", "history"],
   },
 ]
-
-export default function PostList() {
-  return (
-    <div className="flex flex-col gap-4 py-0 md:py-6">
-      {posts.map((item, index) => (
-        <Card
-          className="border transition-all hover:cursor-pointer hover:bg-accent md:hover:translate-x-2"
-          key={index}
-        >
-          <CardHeader>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.date}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Image
-              className="rounded"
-              width="200"
-              height="200"
-              src={`/posts-images/${item.image}`}
-              alt={item.title}
-            />
-            <p className="mt-4">{item.description}</p>
-          </CardContent>
-          <CardFooter>
-            <div className="flex flex-wrap gap-1">
-              {item.tags.map((tag, index) => (
-                <Badge key={index} variant="outline">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </CardFooter>
-        </Card>
-      ))}
-    </div>
-  )
-}

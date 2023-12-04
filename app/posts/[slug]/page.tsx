@@ -6,6 +6,7 @@ import type { MDXComponents } from "mdx/types"
 import Link from "next/link"
 import Image from "next/image"
 import { Info } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const mdxComponents: MDXComponents = {
   // Override the default <a> element to use the next/link component.
@@ -47,9 +48,9 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-    <article className="py-8 prose prose-lg prose-img:rounded-[var(--rounded-box)]">
+    <article className="py-8 max-w-xl prose prose-lg mx-auto">
       <div className="mb-8 text-center">
-        <time dateTime={post.date} className="mb-1 text-secondary text-sm">
+        <time dateTime={post.date} className="mb-1 text-sm">
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
         <h1 className="text-5xl font-bold mb-12">{post.title}</h1>
@@ -59,12 +60,15 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       <div
         className="text-center"
       >
-        <Link
-          href="/posts"
-          className="btn btn-primary btn-outline"
-        >
-          See all posts
-        </Link>
+        <Button
+          variant="outline"
+        asChild>
+          <Link
+            href="/"
+            >
+            See all posts
+          </Link>
+        </Button>
       </div>
     </article>
   )

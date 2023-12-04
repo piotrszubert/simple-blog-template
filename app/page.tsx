@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <div>
         <PostsList />
-        <PostList />
+        {/* <PostList /> */}
       </div>
     </main>
   )
