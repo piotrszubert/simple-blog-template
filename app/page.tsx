@@ -1,22 +1,35 @@
-import { Inter } from "next/font/google"
-import ContentTabs from "@/components/contentTabs"
 import PostsList from "@/components/postsList"
-
-const inter = Inter({ subsets: ["latin"] })
+import { Hero } from "@/components/hero"
+import { siteConfig } from "@/config/site"
 
 export default function Home() {
-  return (
-    <main
-      className={`m-auto grid max-w-5xl grid-cols-1 gap-x-6 gap-y-6 px-3 md:grid-cols-2  ${inter.className}`}
-    >
-      <div>
-        <div className="top-1/2 mt-6 md:sticky md:-translate-y-1/2">
-          <ContentTabs />
+  if (siteConfig.layout === "normal") {
+    return (
+      <main className="m-auto flex max-w-3xl flex-col gap-6 px-3">
+        <div>
+          <div className="top-1/2 mt-6 border-y border-dashed px-6 pt-8">
+            <Hero />
+          </div>
         </div>
-      </div>
-      <div>
-        <PostsList />
-      </div>
-    </main>
-  )
+        <div>
+          <PostsList />
+        </div>
+      </main>
+    )
+  } else if (siteConfig.layout === "aside") {
+    return (
+      <main
+        className={`m-auto grid max-w-5xl grid-cols-1 gap-x-6 gap-y-6 px-3 md:grid-cols-2`}
+      >
+        <div className="md:px-6">
+          <div className="top-1/2 mt-6 border-y border-dashed px-6 pt-8 md:sticky md:-translate-y-1/2">
+            <Hero />
+          </div>
+        </div>
+        <div>
+          <PostsList />
+        </div>
+      </main>
+    )
+  }
 }
