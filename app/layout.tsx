@@ -1,6 +1,7 @@
 import "./globals.css"
 import { ThemeProvider } from "@/components/themeProvider"
 import { Montserrat as FontSans } from "next/font/google"
+import { siteConfig } from "@/config/site"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -9,10 +10,10 @@ export const fontSans = FontSans({
 
 export const metadata = {
   title: {
-    default: 'BlogTemplate',
-    template: `%s | ${'te'}`,
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  // description: siteConfig.description,
+  description: siteConfig.description,
   keywords: [
     "Next.js",
     "React",
@@ -26,7 +27,7 @@ export const metadata = {
       url: "https://github.com/piotrszubert",
     },
   ],
-  creator: "ps77",
+  creator: "ps777",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },

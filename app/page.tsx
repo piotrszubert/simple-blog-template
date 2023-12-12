@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google"
 import ContentTabs from "@/components/contentTabs"
 import PostsList from "@/components/postsList"
-
 
 export default function Home() {
   return (
