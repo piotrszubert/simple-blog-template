@@ -7,6 +7,7 @@ type SiteConfig = {
     twitter: string
     github: string
   }
+  layout: "normal" | "aside"
 }
 
 export const siteConfig: SiteConfig = {
@@ -19,4 +20,5 @@ export const siteConfig: SiteConfig = {
     twitter: "",
     github: "https://github.com/piotrszubert",
   },
+  layout: "aside",
 }
