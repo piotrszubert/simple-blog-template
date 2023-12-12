@@ -40,6 +40,9 @@ export default function RootLayout({
       <body className={`${fontSans.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
+          <footer className="text-center text-xs text-muted-foreground">
+            Copyright &copy; 2023 ps777
+          </footer>
         </ThemeProvider>
       </body>
     </html>
