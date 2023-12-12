@@ -5,20 +5,15 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Badge } from "./ui/badge"
 import Image from "next/image"
 
 function PostCard(post: Post) {
   return (
     <Card className="relative border transition-all hover:cursor-pointer hover:bg-accent md:hover:translate-x-2">
-      <Link
-        href={post.url}
-        className="absolute inset-0 text-blue-700 hover:text-blue-900 dark:text-blue-400"
-      ></Link>
+      <Link href={post.url} className="absolute inset-0"></Link>
       <CardHeader>
         <CardTitle>{post.title}</CardTitle>
         <CardDescription>
@@ -28,7 +23,6 @@ function PostCard(post: Post) {
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          {/* {post.date} */}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -43,15 +37,6 @@ function PostCard(post: Post) {
         )}
         <p className="mt-4 text-sm text-muted-foreground">{post.description}</p>
       </CardContent>
-      {/* <CardFooter>
-        <div className="flex flex-wrap gap-1">
-          {post.tags.map((tag, index) => (
-            <Badge key={index} variant="outline">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </CardFooter> */}
     </Card>
   )
 }
