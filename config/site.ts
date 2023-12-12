@@ -8,6 +8,7 @@ type SiteConfig = {
     github: string
   }
   layout: "normal" | "aside"
+  postImages: boolean
 }
 
 export const siteConfig: SiteConfig = {
@@ -21,4 +22,5 @@ export const siteConfig: SiteConfig = {
     github: "https://github.com/piotrszubert",
   },
   layout: "aside",
+  postImages: false,
 }

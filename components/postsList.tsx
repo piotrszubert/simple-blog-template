@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Image from "next/image"
+import { siteConfig } from "@/config/site"
 
 function PostCard(post: Post) {
   return (
@@ -26,16 +27,16 @@ function PostCard(post: Post) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        {post.image && (
+        {siteConfig.postImages && post.image && (
           <Image
-            className="rounded"
+            className="mb-6 rounded"
             width="200"
             height="200"
             src={post.image}
             alt={post.title}
           />
         )}
-        <p className="mt-4 text-sm text-muted-foreground">{post.description}</p>
+        <p className="text-sm text-muted-foreground">{post.description}</p>
       </CardContent>
     </Card>
   )
