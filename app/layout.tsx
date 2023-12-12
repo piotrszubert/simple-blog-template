@@ -1,5 +1,11 @@
 import "./globals.css"
 import { ThemeProvider } from "@/components/themeProvider"
+import { Montserrat as FontSans } from "next/font/google"
+
+export const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata = {
   title: "Next.js",
@@ -13,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${fontSans.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
