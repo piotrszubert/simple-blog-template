@@ -24,7 +24,7 @@ function PostCard(post: Post) {
         <CardDescription>
           <time
             dateTime={post.date}
-            className="mb-2 block text-xs text-gray-600"
+            className="text-muted-secondary mb-2 block text-xs font-semibold"
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
@@ -41,7 +41,7 @@ function PostCard(post: Post) {
             alt={post.title}
           />
         )}
-        <p className="mt-4">{post.description}</p>
+        <p className="mt-4 text-sm text-muted-foreground">{post.description}</p>
       </CardContent>
       {/* <CardFooter>
         <div className="flex flex-wrap gap-1">
